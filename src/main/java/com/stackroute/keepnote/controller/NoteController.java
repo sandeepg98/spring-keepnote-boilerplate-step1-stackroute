@@ -1,9 +1,10 @@
 package com.stackroute.keepnote.controller;
 
+import com.stackroute.keepnote.BeansConfig;
 import com.stackroute.keepnote.model.Note;
 import com.stackroute.keepnote.repository.NoteRepository;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,7 +40,7 @@ public class NoteController {
 	 */
 
 	private ApplicationContext getAppContext() {
-		return new ClassPathXmlApplicationContext("beans.xml");
+		return new AnnotationConfigApplicationContext(BeansConfig.class);
 	}
 
 	private Note getNote() {

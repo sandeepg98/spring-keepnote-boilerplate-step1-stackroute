@@ -18,7 +18,7 @@ public class Note {
 	private String noteTitle;
 	private String noteContent;
 	private String noteStatus;
-	private LocalDateTime createdAt = LocalDateTime.now();
+	private LocalDateTime createdAt;
 
 	/* All the getters/setters definition should be implemented here */
 
@@ -59,7 +59,7 @@ public class Note {
 	}
 
 	public void setCreatedAt(LocalDateTime createdAt) {
-		this.createdAt = createdAt;
+		this.createdAt = LocalDateTime.now();
 	}
 
 	/* Override the toString() method */
